@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context = ".NamesList"
+    android:background="@drawable/border">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Names List"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:layout_gravity="center_horizontal"
+        android:textStyle="bold"
+        android:background="@drawable/bordertext"
+        android:id="@+id/listTitle" />
+    <ScrollView
+        android:id="@+id/listScroll"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:fillViewport="true"
+        android:background="@drawable/bordertext">
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:text=""
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:id="@+id/listText"
+        android:textAlignment="viewEnd"
+        android:textColor="#fff"
+        android:scrollbars = "vertical"/>
+    </ScrollView>
+</LinearLayout>

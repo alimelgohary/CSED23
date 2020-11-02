@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">CSED 23</string>
+
+    <string name="tables">
+        https://docs.google.com/spreadsheets/d/e/2PACX-1vSi7QmsuhbiKrgboF_VoUFPecTElfUYxesyuu4T1yiNCmpy_v4zz_zhhuDmH7jSv0kbgJrCvgujx3Jr/pub?output=tsv
+    </string>
+
+    <string name="links">
+        https://docs.google.com/spreadsheets/d/e/2PACX-1vS028to9abAjgILMbJzwOX_H2a0hji3iKsmP676PjmmczrMU24EkBxsQli03kxZf4dxHvqZkp4sLazf/pub?output=tsv
+    </string>
+
+    <string name="announcements">
+        https://docs.google.com/spreadsheets/d/e/2PACX-1vSxo0O040tq64Xg3O3zOfIxWMbo65oZ9jk1DTgqXijJqsAfpiLFzmt1kDQ7RMPyQqlf8_EXAadHihEl/pub?output=tsv
+    </string>
+
+    <string name="livenow">🔴 <u>Live Now</u></string>
+<string name="about"><b>
+    This app was made for :- \n\n\nComputer Science And Control Systems Department\n\n\nFaculty Of Engineering\nMansoura University\n\n\n2023 Batch</b></string>
+
+ <string name="endOfAbout"><b>By Ali M Elgohary \n\nhttps://m.facebook.com/alimelgohary \n\n2020</b></string>
+    <string name="chooseday"><u>Choose a day</u></string>
+</resources>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="eg.edu.mans.csed">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        >
+        <activity
+            android:name=".Loading"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+
+        <activity
+            android:name=".Table"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name=".Links"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name=".Announcements"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name=".NamesList"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name=".Notes"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name=".About"
+            android:screenOrientation="portrait"
+            />
+
+        <receiver android:name=".AlarmMe"
+            android:process=":remote"/>
+        <receiver android:name=".CSEDBootReceiver"
+            android:enabled="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="eg.edu.mans.csed.Loading"
+            android:exported="false" />
+        <!--
+            get notifications for announcements updates
+        -->
+
+    </application>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+</manifest>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Loading"
+    android:background="@drawable/border"
+    >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    >
+    <Button
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bordertext"
+        android:textColor="#fff"
+        android:text = "Section 1"
+        android:textStyle="bold"
+        android:onClick="section1"
+        android:textAllCaps="false"
+        
+        />
+</RelativeLayout>
+ <RelativeLayout
+     android:layout_width="match_parent"
+     android:layout_height="0dp"
+     android:layout_weight="1">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bordertext"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:textAllCaps="false"
+        android:text = "Section 2"
+        android:layout_centerInParent="true"
+        android:onClick="section2"
+        
+        />
+ </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        
+    <Button
+        android:layout_width="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bordertext"
+        android:textColor="#fff"
+        android:layout_centerInParent="true"
+        android:textStyle="bold"
+        android:text = "Section 3"
+        android:onClick="section3"
+        android:textAllCaps="false"
+        />
+
+    </RelativeLayout>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1">
+    <Button
+        android:layout_width="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bordertext"
+        android:layout_centerInParent="true"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:text = "Section 4"
+        android:onClick="section4"
+        android:textAllCaps="false"
+        />
+</RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bordertext"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:text="Remember Chosen Section"
+        android:layout_centerInParent="true"
+        android:checked="true"
+        
+        />
+    </RelativeLayout>
+</LinearLayout>
