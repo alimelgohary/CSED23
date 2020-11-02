@@ -9,3 +9,7 @@ it periodically checks for new updates in announcements and send notifications w
 when app is opened 
 
 all info are updated from google sheets to app
+
+It also shows what lectures are happening now
+
+It has a small notes section
