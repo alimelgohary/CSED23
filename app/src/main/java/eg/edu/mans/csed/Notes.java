@@ -1,5 +1,7 @@
 package eg.edu.mans.csed;
 
+import android.content.ClipData;
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,14 +9,17 @@ import android.text.InputType;
 import android.text.method.ArrowKeyMovementMethod;
 import android.text.method.KeyListener;
 import android.text.method.LinkMovementMethod;
+import android.text.method.MovementMethod;
 import android.text.util.Linkify;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -22,6 +27,8 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
+
+import me.saket.bettermovementmethod.BetterLinkMovementMethod;
 
 public class Notes extends AppCompatActivity {
     private KeyListener listener;
@@ -40,17 +47,32 @@ public class Notes extends AppCompatActivity {
 
         // store editText key listener to recover it when edit is clicked
         listener = editText.getKeyListener();
-
         //Enable links click
-        editText.setMovementMethod(LinkMovementMethod.getInstance());
+        //editText.setMovementMethod(LinkMovementMethod.getInstance());
+        // make links long clickable for copying link
+        editText.setMovementMethod(BetterLinkMovementMethod.newInstance().setOnLinkLongClickListener(new BetterLinkMovementMethod.OnLinkLongClickListener() {
+            @Override
+            public boolean onLongClick(TextView textView, String url) {
 
+                //copy to clipboard
+                ClipboardManager clipboard = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
+                ClipData cData = ClipData.newPlainText("text", url);
+                clipboard.setPrimaryClip(cData);
+
+                // when long clicked, text is selected so this code is to deselect text
+                textView.setSelected(false);
+
+                Toast.makeText(getApplicationContext(),"Link copied to clipboard.", Toast.LENGTH_SHORT).show();
+                return true;
+            }
+
+        }));
         //Disable edit
         editText.setKeyListener(null);
 
     }
     public void edit(View m){
-        EditText editText = findViewById(R.id.editNotes);
-
+        final EditText editText = findViewById(R.id.editNotes);
         //Disable links click
         editText.setMovementMethod(ArrowKeyMovementMethod.getInstance());
 

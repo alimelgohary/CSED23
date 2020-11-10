@@ -152,21 +152,31 @@ public class AlarmMe extends BroadcastReceiver {
     public void checkIfDownloaded(){
         //if (DownloadFileFromURL.newAnnouncementsDone == 1){
         Log.e("why", "checkIfDownloaded here");
-try {
-    List<String> new_ann = tsvToList("new_announcements.tsv");
-    List<String> old_ann = tsvToList("announcements.tsv");
+        try {
+            List<String> new_ann = tsvToList("new_announcements.tsv");
+            List<String> old_ann = tsvToList("announcements.tsv");
 
-    List<String> compare = compareLists(new_ann, old_ann);
-    if (compare.size() != 0) {
-        for (int i = 0; i < compare.size(); i++) {
-            NotificationHelper notificationHelper = new NotificationHelper(context);
-            NotificationCompat.Builder nb = notificationHelper.getChannelNotification("New Announcement", compare.get(i));
-            notificationHelper.getManager().notify(i, nb.build());
+            List<String> compare = compareLists(new_ann, old_ann);
+            if (compare.size() != 0) {
+                for (int i = 0; i < compare.size(); i++) {
+                    NotificationHelper notificationHelper = new NotificationHelper(context);
+
+                    //Split the announcement to Sender,Message (will be written in sheet in that format)
+                    String [] announcement = compare.get(i).split("\\$");
+                    if (announcement.length == 2){
+                        NotificationCompat.Builder nb = notificationHelper.getChannelNotification(announcement[0], announcement[1]);
+                        notificationHelper.getManager().notify(i, nb.build());
+                    }
+                    else{
+                        NotificationCompat.Builder nb = notificationHelper.getChannelNotification("New Announcement", announcement[0]);
+                        notificationHelper.getManager().notify(i, nb.build());
+                    }
+                }
+            }
+        }catch (Exception e){
+            //if no announcements file
+            Log.e("why", "error in check if downloaded new announcements to get notifications" + e.getMessage());
         }
-    }
-}catch (Exception e){
-    Log.e("why", "error in check if downloaded new announcements to get notifications");
-}
         //}
     }
 

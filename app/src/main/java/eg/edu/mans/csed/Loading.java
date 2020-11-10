@@ -231,14 +231,14 @@ public class Loading extends AppCompatActivity {
 
         //Get Today's table with chosen Section
         String[] str = data[dayFromCalendar - 1][Loading.section - 1].split("=");
-        int i; // initialized here to be used outside loop
+        int i; // Declared here to be used outside loop
         String currentLecture = "";
         int difference; // Difference between current time and lecture time
         int lecDuration;
 
         // A loop to find time in today's lectures
         for (i = 0; i < str.length; i++) {
-            //For ex. 11:50 ==> find first the ':'
+            //For ex. 11:50 ==> find the ':' first
             int index = str[i].indexOf(':');
 
             if (index >= 0) {   //if ':' found
@@ -266,6 +266,10 @@ public class Loading extends AppCompatActivity {
                     currentLecture = str[i];
                     liveNow.setText("\uD83D\uDD34 Live Now \n\n " + currentLecture); //Circle Symbol
                     break;                                                          // Don't look anymore
+                }
+                else if (difference >= -15 && difference < 0){ //Lecture after less than 15 minutes
+                    liveNow.setText("Live Now : \n\nLecture in " + -1 * difference + " Minutes");
+                    break;
                 }
             }
         }

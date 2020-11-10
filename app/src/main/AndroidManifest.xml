@@ -33,6 +33,7 @@
         <activity
             android:name=".Announcements"
             android:screenOrientation="portrait"
+            android:parentActivityName=".Loading"
             />
         <activity
             android:name=".NamesList"

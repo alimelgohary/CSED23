@@ -10,7 +10,10 @@
     </string>
 
     <string name="announcements">
-        https://docs.google.com/spreadsheets/d/e/2PACX-1vSxo0O040tq64Xg3O3zOfIxWMbo65oZ9jk1DTgqXijJqsAfpiLFzmt1kDQ7RMPyQqlf8_EXAadHihEl/pub?output=tsv
+<!--Real Announcements-->        https://docs.google.com/spreadsheets/d/e/2PACX-1vSxo0O040tq64Xg3O3zOfIxWMbo65oZ9jk1DTgqXijJqsAfpiLFzmt1kDQ7RMPyQqlf8_EXAadHihEl/pub?output=tsv
+
+<!-- Test Announcements  https://docs.google.com/spreadsheets/d/e/2PACX-1vSnMvDUamzZSNQTfYWWZmQyUSUIwCPQ9k42rSt51nVp3cJpNJMu6JF7oWJqu8YmoORqIVeAj2pi11Ty/pub?output=tsv
+-->
     </string>
 
     <string name="livenow">🔴 <u>Live Now</u></string>

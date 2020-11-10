@@ -33,7 +33,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Tommorow"
+            android:text="Tomorrow"
             android:layout_margin="5dp"
             android:textAllCaps="false"
             android:textStyle="bold"
@@ -71,6 +71,7 @@
         android:textColor="#fff"
         android:textAlignment="viewEnd"
         android:textStyle="bold"
+        android:textIsSelectable="true"
         />
     </LinearLayout>
 </RelativeLayout>
@@ -92,7 +93,7 @@
 
         <Button
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Sat"
             android:layout_margin="5dp"
@@ -105,7 +106,7 @@
         <Button
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:text="Sun"
             android:layout_margin="5dp"
             android:textAllCaps="false"
@@ -116,7 +117,7 @@
             />
         <Button
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Mon"
             android:layout_margin="5dp"
@@ -128,7 +129,7 @@
             />
         <Button
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Tue"
             android:layout_margin="5dp"

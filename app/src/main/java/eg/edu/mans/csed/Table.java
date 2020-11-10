@@ -82,8 +82,10 @@ public class Table extends AppCompatActivity {
         Calendar calendar = Calendar.getInstance();
         calendar.setFirstDayOfWeek(Calendar.SATURDAY);
         int weekNumber = calendar.get(Calendar.WEEK_OF_YEAR);
+        if(day==7 && Calendar.getInstance().get(Calendar.DAY_OF_WEEK) == 6){weekNumber++;} //if pressed tomorrow from friday
         Log.e("why", ""+weekNumber);
         String evenOrOdd =  weekNumber%2==0? "أسبوع زوجي" : "أسبوع فردي";
+
         String formatted = "";
         try{
             //get lectures as an array [lec1, lec2, lec3, ...]  (lectures is split by '=')

@@ -34,6 +34,8 @@
         android:id="@+id/listText"
         android:textAlignment="viewEnd"
         android:textColor="#fff"
-        android:scrollbars = "vertical"/>
+        android:scrollbars = "vertical"
+        android:textIsSelectable="true"
+        />
     </ScrollView>
 </LinearLayout>

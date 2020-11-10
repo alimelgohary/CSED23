@@ -43,6 +43,9 @@
         android:linksClickable="true"
         android:clickable="true"
         android:focusable="true"
+        android:enabled="true"
+        android:cursorVisible="true"
+        android:textIsSelectable="true"
 
         />
 </RelativeLayout>
@@ -81,7 +84,8 @@
             android:background="@drawable/bordertext"
             android:textAllCaps="false"
             android:textColor="#fff"
-            android:onClick="edit" />
+            android:onClick="edit"
+            android:id="@+id/edit"/>
 
 
     </LinearLayout>

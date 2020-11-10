@@ -38,6 +38,7 @@
             android:textColor="#fff"
             android:autoLink="web"
             android:text=""
+            android:textIsSelectable="true"
             />
     </ScrollView>
 </LinearLayout>
