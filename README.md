@@ -1,5 +1,7 @@
 # CSED
 
+Google Sheets to Android mobile app java
+
 This app was made to help Computer Science Engineering Department in Mansoura University with E-learning in Covid-19 wave 2
 
 It's connected to 3 google sheets (time table - important links like youtube channel lectures - Announcements)
